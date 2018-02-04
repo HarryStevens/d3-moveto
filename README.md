@@ -8,7 +8,34 @@ Unlike HTML elements, SVG elements have no `z-index` attribute, so it is impossi
 
 ## Installing
 
-If you use NPM, `npm install d3-moveto`. Otherwise, download the [latest release](https://github.com/harrystevens/d3-moveto/releases/latest).
+If you use NPM, `npm install d3-moveto`. Otherwise, download the [latest release](https://github.com/HarryStevens/d3-moveto/tree/master/build). You can also load directly from [unpkg](https://unpkg.com/d3-moveto). You may use the entire [D3.js library](https://d3js.org/) or, at a minimum, [d3-selection](https://github.com/d3/d3-selection).
+
+## Example
+
+```html
+<svg>
+	<rect class="rect rect-1" x="0" y="0" height="10" width="10" fill="blue"></rect>
+	<rect class="rect rect-2" x="10" y="0" height="10" width="10" fill="yellow"></rect>
+	<rect class="rect rect-3" x="10" y="10" height="10" width="10" fill="green"></rect>
+	<rect class="rect rect-4" x="0" y="10" height="10" width="10" fill="purple"></rect>
+	<rect class="front" x="0" y="0" height="20" width="20" fill="red"></rect>
+</svg>
+
+<script src="https://d3js.org/d3-selection.v1.min.js"></script>
+<script src="https://unpkg.com/d3-moveto"></script>
+<script>
+	var curr = 1;
+	setInterval(function(){
+		d3.selectAll(".rect").moveToBack();
+		d3.select(".rect-" + curr).moveToFront();
+		if (curr == 4) {
+			curr = 1;
+		} else {
+			curr++;
+		}
+	}, 1000);
+</script>
+```
 
 ## API Reference
 
