@@ -14,26 +14,26 @@ If you use NPM, `npm install d3-moveto`. Otherwise, download the [latest release
 
 ```html
 <svg>
-	<rect class="rect rect-1" x="0" y="0" height="10" width="10" fill="blue"></rect>
-	<rect class="rect rect-2" x="10" y="0" height="10" width="10" fill="yellow"></rect>
-	<rect class="rect rect-3" x="10" y="10" height="10" width="10" fill="green"></rect>
-	<rect class="rect rect-4" x="0" y="10" height="10" width="10" fill="purple"></rect>
-	<rect class="front" x="0" y="0" height="20" width="20" fill="red"></rect>
+  <rect class="rect rect-1" x="0" y="0" height="10" width="10" fill="blue"></rect>
+  <rect class="rect rect-2" x="10" y="0" height="10" width="10" fill="yellow"></rect>
+  <rect class="rect rect-3" x="10" y="10" height="10" width="10" fill="green"></rect>
+  <rect class="rect rect-4" x="0" y="10" height="10" width="10" fill="purple"></rect>
+  <rect class="front" x="0" y="0" height="20" width="20" fill="red"></rect>
 </svg>
 
 <script src="https://d3js.org/d3-selection.v1.min.js"></script>
 <script src="https://unpkg.com/d3-moveto"></script>
 <script>
-	var curr = 1;
-	setInterval(function(){
-		d3.selectAll(".rect").moveToBack();
-		d3.select(".rect-" + curr).moveToFront();
-		if (curr == 4) {
-			curr = 1;
-		} else {
-			curr++;
-		}
-	}, 1000);
+  var curr = 1;
+  setInterval(function(){
+    d3.selectAll(".rect").moveToBack();
+    d3.select(".rect-" + curr).moveToFront();
+    if (curr == 4) {
+      curr = 1;
+    } else {
+      curr++;
+    }
+  }, 1000);
 </script>
 ```
 
