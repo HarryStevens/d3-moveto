@@ -1,6 +1,6 @@
 {
   "name": "d3-moveto",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "d3-moveto works with D3 selections to let you move SVG elements to the front or back of their parent SVG.",
   "keywords": [
     "d3",
