@@ -4,7 +4,7 @@
 
 In interactive data visualizations, it is often necessary to bring elements to the front or back. But it is not easy to do this with SVG.
 
-Unlike HTML elements, SVG elements have no `z-index` attribute, so it is impossible to make a younger sibling appear on top of an older one. Therefore, in SVG, elements which are appended to the DOM first will always appear on top of elements appended later.
+Unlike HTML elements, SVG elements have no `z-index` attribute, so it is impossible to make a younger sibling appear on top of an older one. Therefore, in SVG, elements which are appended to the DOM first will always appear on top of elements appended later. `d3-moveto` works by changing the order of elements in the DOM.
 
 ## Installing
 
