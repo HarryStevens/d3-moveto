@@ -1,3 +1,7 @@
+# Deprecated
+
+This module has been deprecated. Use [<i>selection</i>.raise()](https://github.com/d3/d3-selection#selection_raise) and [<i>selection</i>.lower()](https://github.com/d3/d3-selection#selection_lower) from [d3-selection](https://github.com/d3/d3-selection).
+
 # d3-moveto
 
 `d3-moveto` works with D3 selections to let you move SVG elements to the front or back of their parent SVG.
